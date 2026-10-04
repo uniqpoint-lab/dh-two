@@ -43,6 +43,43 @@
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
+  --font-sans: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'SF Pro Display', 'Helvetica Neue', var(--font-inter), system-ui, sans-serif;
+}
+
+.imessage-bubble.has-tail::before,
+.imessage-bubble.has-tail::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  height: 20px;
+}
+
+.bubble-agent.has-tail::before {
+  left: -7px;
+  width: 20px;
+  background: #e9e9eb;
+  border-bottom-right-radius: 16px;
+}
+
+.bubble-agent.has-tail::after {
+  left: -26px;
+  width: 26px;
+  background: #fff;
+  border-bottom-right-radius: 10px;
+}
+
+.bubble-user.has-tail::before {
+  right: -7px;
+  width: 20px;
+  background: #0a84ff;
+  border-bottom-left-radius: 16px;
+}
+
+.bubble-user.has-tail::after {
+  right: -26px;
+  width: 26px;
+  background: #fff;
+  border-bottom-left-radius: 10px;
 }
 
 :root {

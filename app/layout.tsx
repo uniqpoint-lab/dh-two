@@ -1,10 +1,13 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
+import { Inter } from 'next/font/google'
 import './globals.css'
 
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
+
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
+  title: 'dh2 — DoorDash AI Assistant iMessage Mockup',
+  description: 'High-fidelity iPhone iMessage mockup of a proactive DoorDash AI assistant ordering lunch around your calendar.',
   generator: 'v0.app',
   icons: {
     icon: [
@@ -39,8 +42,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body className="antialiased">
+    <html lang="en" className={inter.variable}>
+      <body className="font-sans antialiased">
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
